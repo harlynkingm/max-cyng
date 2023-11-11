@@ -1,32 +1,22 @@
 @font-face {
-  font-family: NoirPro;
-  src: url("./fonts/NoirPro-Regular.otf");
+  font-family: 'Consolas';
+  src: url("./fonts/Consolas.ttf");
   font-weight: normal;
-}
-
-@font-face {
-  font-family: NoirPro;
-  src: url("./fonts/NoirPro-Medium.otf");
-  font-weight: bold;
+  font-style: normal;
 }
 
 html, body {
   height: 100%;
   margin: 0;
-  font-family: NoirPro, sans-serif;
+  font-family: 'Consolas', monospace;
 }
 
 .background {
-  background-color: #F2F2F2;
+  background-color: #0D0D0D;
   position: fixed;
   width: 200%;
   height: 200%;
   transform: translate3d(-50%, -25%, -1000px);
-}
-
-::selection {
-  background: none;
-  color: #737373;
 }
 
 .wrapper {
@@ -44,88 +34,34 @@ html, body {
 }
 
 h1 {
-  color: #0D0D0D;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 1.4em;
+  color: #F2F2F2;
+  font-size: 3em;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 1em;
 }
 
 p {
-  color: #262626;
-  font-size: 1.2em;
+  color: #BFBFBF;
+  font-size: 1.5em;
   font-weight: normal;
+  font-style: normal;
   line-height: 1.2;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 p a {
-  color: #0D0D0D;
+  color: #F2F2F2;
 }
 
 p.small {
   font-size: 1em;
 }
 
-p.small a {
-  color: #737373;
+.space:before {
+  content: '';
 }
 
-@media (prefers-color-scheme: dark) {
-
-  .background {
-    background-color: #0D0D0D;
-  }
-
-  h1 {
-    color: #F2F2F2;
-  }
-  
-  p {
-    color: #BFBFBF;
-  }
-  
-  p a {
-    color: #F2F2F2;
-  }
-
-}
-
-/* Animations */
-
-h1, p {
-  opacity: 0;
-  -webkit-animation: fadein 0.5s ease-in 0.5s forwards;
-  -moz-animation: fadein 0.5s ease-in 0.5s forwards;
-  -ms-animation: fadein 0.5s ease-in 0.5s forwards;
-  -o-animation: fadein 0.5s ease-in 0.5s forwards;
-  animation: fadein 0.5s ease-in 0.5s forwards;
-}
-
-h1 {
-  animation-delay: 0.1s;
-}
-
-p:nth-of-type(1) {
-  animation-delay: 0.6s;
-}
-
-p:nth-of-type(2) {
-  animation-delay: 0.7s;
-}
-
-p:nth-of-type(3) {
-  animation-delay: 0.8s;
-}
-
-p:nth-of-type(4) {
-  animation-delay: 0.9s;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.space {
+  padding-bottom: 1em;
 }
